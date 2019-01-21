@@ -1,4 +1,4 @@
-package com.example.usermanagement;
+package com.example.customermanagement;
 
 import android.os.Bundle;
 import io.flutter.app.FlutterActivity;
