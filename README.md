@@ -1,4 +1,4 @@
-# user_management
+# customer_management
 
 A new Flutter project.
 

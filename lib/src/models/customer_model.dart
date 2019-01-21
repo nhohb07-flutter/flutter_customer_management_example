@@ -1,10 +1,10 @@
-class UserModel {
+class CustomerModel {
   final int id;
   final String firstName;
   final String lastName;
   final String avatar;
 
-  UserModel({
+  CustomerModel({
     this.id,
     this.firstName,
     this.lastName,
