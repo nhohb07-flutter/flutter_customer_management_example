@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
+import 'theme.dart';
 import 'ui/scenes/index.dart';
 
 class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData.light(),
+      theme: AppTheme.theme,
       home: Scaffold(
-        body: Home(),
+        body: CustomerList(),
       ),
     );
   }

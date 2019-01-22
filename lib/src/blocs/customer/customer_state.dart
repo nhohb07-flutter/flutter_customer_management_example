@@ -35,7 +35,7 @@ class CustomerLoadFailure extends CustomerState {
   }
 
   @override
-  String toString() => 'User Load Failure: ${error}, ${this.isLoading}';
+  String toString() => 'User Load Failure: $error, ${this.isLoading}';
 }
 
 class CustomerLoaded extends CustomerState {

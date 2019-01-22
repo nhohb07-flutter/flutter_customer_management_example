@@ -5,15 +5,17 @@ import 'package:customer_management/src/ui/widgets/index.dart';
 import 'package:customer_management/src/blocs/index.dart';
 import 'package:customer_management/src/models/index.dart';
 
-class Home extends StatefulWidget {
+import '../customer_detail/customer_detail.dart';
+
+class CustomerList extends StatefulWidget {
   @override
-  _HomeState createState() => _HomeState();
+  _CustomerListState createState() => _CustomerListState();
 }
 
-class _HomeState extends State<Home> {
+class _CustomerListState extends State<CustomerList> {
   final CustomerBloc _customerBloc = CustomerBloc();
 
-  _HomeState() {
+  _CustomerListState() {
     _customerBloc.dispatch(FetchCustomer());
   }
 
@@ -34,6 +36,7 @@ class _HomeState extends State<Home> {
             brightness: Brightness.dark,
           ),
           body: this._buildBodyPage(customerState),
+          drawer: AppDrawer(),
         );
       },
     );
@@ -67,7 +70,10 @@ class _HomeState extends State<Home> {
           title: Text('${user.firstName} ${user.lastName}'),
           subtitle: Text(user.lastName),
           dense: true,
-          onTap: () => {},
+          onTap: () => Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => CustomerDetail()),
+              ),
         );
       },
     );
